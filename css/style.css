@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+  --light: #A8D0E6;
+  --black: #314455;
+  --dark: #24305E;
+  --contrast: #fcb04c;
+  --blue: #374785;
+  --red: #F76C6C;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* CSS for navbar */
+.navbar {
+  /* background-image: linear-gradient(to right, var(--light), var(--red)); */
+  background-color: var(--red);
+  font-family: 'Bebas Neue', sans-serif;
+  color: black;
+}
+
+.navbar-brand {
+  color: black;
+  font-size: 3vh;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  font-size: 3vh;
+  margin-right: 20px;
+}
+
+/* Set active navbar link color */
+.navbar-nav .active > .nav-link {
+  color: var(--contrast);
+}
+
+/* Set dropdown menu background color and font */
+.dropdown-menu {
+  background-color: #F76C6C;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Set dropdown menu link color and size */
+.dropdown-menu a {
+  color: white;
+  font-size: 3vh;
+}
+
+/* Set navbar toggler icon color */
+.navbar-toggler-icon {
+  color: white;
+}
+
+  
+  /* Home Page Section Styling */
+
+  body {
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+  }
+  .staircase {
+    font-family: 'Allura', cursive;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 20% 20%;
+    background-color: var(--light);
+  }
+  
+  .name:nth-of-type(1) {
+    text-align: left;
+    margin-right: 60%;
+    color: var(--black);
+  }
+  
+  .name:nth-of-type(2) {
+    text-align: center;
+    color: var(--black);
+  }
+  
+  .name:nth-of-type(3) {
+    text-align: right;
+    margin-left: 60%;
+    color: var(--black);
+  }
+  
+  .name {
+    font-size: 8vh;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 10px 50px 5px 50px;
+    background-color: var(--red);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-inner {
+    background-color: #374785;
+    color: #fcb04c;
+    font-size: 16px; /* Adjust font size as needed */
+    max-width: 10vw; /* Adjust maximum width as needed */
+    padding: 10%;
+  }
+  
+  .tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: #374785;
+  }
+  
+
+/*Soccer Ball animation*/
+.soccer-container {
+  height: 100px;
+  background-color: #A8D0E6;
+  position: relative;
+}
+
+.soccer-ball {
+  width: 100px;
+  height: 100px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/1024px-Soccerball.svg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  animation: soccer-bounce 6s ease-in-out infinite;
+}
+
+/* Define the animation */
+@keyframes soccer-bounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(100vw - 100px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+  
+/* Information CSS */
+
+.container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.content h1 {
+  font-size: 5vh;
+  margin-bottom: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 2vh;
+  margin-top: 0;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.image-container {
+  margin-left: 2rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.code-box {
+  background-color: var(--black);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: auto;
+  position: relative;
+}
+
+.code-header {
+  align-items: center;
+  background-color: #ddd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.code-language {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.copy-code {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.copy-code:hover {
+  background-color: #555;
+}
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  margin: 0;
+  white-space: pre-wrap;
+  color: white;
+  margin-top: 10px;
+}
+  
