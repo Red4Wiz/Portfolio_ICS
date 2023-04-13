@@ -57,36 +57,62 @@
         <h1>OOP Introduction</h1>
         <p>Object-Oriented programming (OOP) is a way to simulate real-life situations through software. Rather than functions and logic involved in a typical program, OOP is a way to use coding to design data using objects. For example, imagine a car, we can use OOP to simulate a car object in code with its own attributes (features), and methods (functions). .</p>
       </div>
-      <div class="image-container">
-        <img src="https://via.placeholder.com/500x500" alt="Placeholder Image">
+      <div class="code-box">
+        <div class="code-header">
+          <div class="code-language">JAVA</div>
+          <button class="copy-code" onclick="copyCode()">Copy</button>
+        </div>
+        <pre class="code">
+  public class Car {
+    private int gasTankLevel;
+    private String name;
+    private double kmDriven;
+
+    public void drive(double n) {
+        kmDriven += n;
+    }
+
+  }
+        </pre>
       </div>
       <div class="content">
         <h1>OOP Information</h1>
         <p>There are two main structures when using OOP, which are objects and classes. A Class is a template that contains the variables and the methods common to a specific type of object, such as a Car class. An object however is an instance of a class that holds specific values such as its name, attribute and behaviour, such as the Mustang object. These objects hold their own unique attributes and methods unless it is static which means its common to all cars, and that is an access identifier. Private means the attribute/method cant be accessed outside the class and public means it can be accessed outside the class, which are some other access identifiers. Protected is also an access modifier and can be used when you want to access in subclasses, this is an inheritance which will be talked about later. It is good practice to use get/set methods instead of accessing attributes directly so the original data can’t be corrupted/changed as easily. Constructor is a standard part of a class that has the same name as the class and when an object is created it is automatically run when a constructor is not created, a default constructor is made by Java but this is not good practice. The new operator is used with the constructor to create the object.</p>
       </div>
-      <div class="image-container">
-        <img src="https://via.placeholder.com/500x500" alt="Placeholder Image">
+      <div class="code-box">
+        <div class="code-header">
+          <div class="code-language">JAVA</div>
+          <button class="copy-code" onclick="copyCode()">Copy</button>
+        </div>
+        <pre class="code">
+  public Car(String name){
+    gasTankLevel = 100;
+    name = name;
+    kmDriven = 0;
+  }
+        </pre>
+      </div>
+      <div class="code-box">
+        <div class="code-header">
+          <div class="code-language">JAVA</div>
+          <button class="copy-code" onclick="copyCode()">Copy</button>
+        </div>
+        <pre class="code">
+  public class Car {
+    private int gasTankLevel;
+    private String name;
+    private double kmDriven;
+
+    public void drive(double n) {
+        kmDriven += n;
+    }
+
+  }
+        </pre>
       </div>
       <div class="content">
         <h1>Inheritance</h1>
         <p>Inheritance is a very important and useful feature that can be used with classes to create more realistic situations. Inheritance is when you create a subclass that inherits all the properties from a main class, therefore there is no need to rewrite code. Just like how a child inherits their features from their parents but still has their own features that are unique to them. Overriding is when you create a method in the subclass that is the same as the parent class and in this case, the subclass runs the method inside this than the main class which is overriding its main class method. This is especially useful in scenarios where two subclasses have things in common. Encapsulation is hiding specific attributes so they can’t be accessed elsewhere. Abstraction is the process of identifying a general-purpose class that contains common properties and methods that you want to use as the parent class for a number of related classes. “this” is an important keyword in OOP. It is mainly used in cases of inheritance when mentioning the instance object itself.</p>
-      </div>
-
-      <div class="code-box">
-        <div class="code-header">
-          <div class="code-language">HTML</div>
-          <button class="copy-code" onclick="copyCode()">Copy</button>
-        </div>
-        <pre class="code">
-          &lt;html&gt;
-            &lt;head&gt;
-              &lt;title&gt;My Webpage&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-              &lt;p&gt;Welcome to my webpage!&lt;/p&gt;
-            &lt;/body&gt;
-          &lt;/html&gt;
-        </pre>
       </div>
       
     </div>

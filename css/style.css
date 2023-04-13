@@ -49,24 +49,20 @@
   margin-right: 20px;
 }
 
-/* Set active navbar link color */
 .navbar-nav .active > .nav-link {
   color: var(--contrast);
 }
 
-/* Set dropdown menu background color and font */
 .dropdown-menu {
   background-color: #F76C6C;
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* Set dropdown menu link color and size */
 .dropdown-menu a {
   color: white;
   font-size: 3vh;
 }
 
-/* Set navbar toggler icon color */
 .navbar-toggler-icon {
   color: white;
 }
@@ -145,7 +141,7 @@
   background-size: contain;
   position: absolute;
   overflow: hidden;
-  bottom: 0;
+  top: 110%;
   left: 0;
   animation: soccer-bounce 6s ease-in-out infinite;
 }
@@ -156,7 +152,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(calc(100vw - 100px));
+    transform: translateX(calc(100vw - 110px));
   }
   100% {
     transform: translateX(0);
@@ -216,15 +212,17 @@
   height: auto;
 }
 
-
+/*CSS for the code box*/
 .code-box {
   background-color: var(--black);
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   overflow: auto;
   position: relative;
+  width: 50%;
 }
+
 
 .code-header {
   align-items: center;
@@ -265,3 +263,46 @@
   margin-top: 10px;
 }
   
+
+/*CSS for project boxes*/
+
+.project-container {
+  padding: 5% 10% 5% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-box {
+  width: 30%;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: var(--blue);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-box:hover {
+  transform: scale(1.1);
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-box h3 {
+  margin-top: 0;
+  font-size: 5vh;
+  color: var(--contrast);
+}
+
+.project-box p {
+  color: var(--light);
+}
