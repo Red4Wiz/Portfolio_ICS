@@ -1,6 +1,5 @@
-function copyCode() {
-    let codeBox = document.querySelector('.code-box pre');
-    let codeText = codeBox.textContent.trim();
-    navigator.clipboard.writeText(codeText);
-  }
-  
+function copyCode(button) {
+  let codeBox = button.closest('.code-box');
+  let codeText = codeBox.querySelector('pre').textContent.trim();
+  navigator.clipboard.writeText(codeText);
+}
