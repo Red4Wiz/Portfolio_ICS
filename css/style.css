@@ -127,11 +127,6 @@
   
 
 /*Soccer Ball animation*/
-.soccer-container {
-  height: 100px;
-  background-color: #A8D0E6;
-  position: relative;
-}
 
 .soccer-ball {
   width: 100px;
@@ -139,9 +134,9 @@
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/1024px-Soccerball.svg.png');
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute;
   overflow: hidden;
-  top: 110%;
+  position: fixed;
+  bottom: 0;
   left: 0;
   animation: soccer-bounce 6s ease-in-out infinite;
 }
@@ -165,7 +160,6 @@
 .container {
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .content {
@@ -217,7 +211,8 @@
   background-color: var(--black);
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin: 0 auto 20px;
+  margin: 0 auto 50px;
+  margin-bottom: 50px;
   overflow: auto;
   position: relative;
   width: 50%;
@@ -320,11 +315,66 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 50px auto;
-  width: 50%;
+  width: 80%;
   background-color: var(--dark);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+  flex-basis: 50%;
+  max-width: 400px;
+  margin-right: 50px;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex-basis: 50%;
   color: var(--contrast);
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.about-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.about-box {
+  flex-basis: 30%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--black);
+  background-color: var(--red);
+}
+
+.about-box h3 {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-box p {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 

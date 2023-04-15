@@ -107,7 +107,48 @@
         <h1>Inheritance</h1>
         <p>Inheritance is a very important and useful feature that can be used with classes to create more realistic situations. Inheritance is when you create a subclass that inherits all the properties from a main class, therefore there is no need to rewrite code. Just like how a child inherits their features from their parents but still has their own features that are unique to them. Overriding is when you create a method in the subclass that is the same as the parent class and in this case, the subclass runs the method inside this than the main class which is overriding its main class method. This is especially useful in scenarios where two subclasses have things in common. Encapsulation is hiding specific attributes so they can’t be accessed elsewhere. Abstraction is the process of identifying a general-purpose class that contains common properties and methods that you want to use as the parent class for a number of related classes. “this” is an important keyword in OOP. It is mainly used in cases of inheritance when mentioning the instance object itself.</p>
       </div>
-      
+      <div class="code-box">
+        <div class="code-header">
+          <div class="code-language">JAVA</div>
+          <button class="copy-code" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre class="code">
+    class Animal {
+      String name;
+      int age;
+  
+      public Animal(String name, int age) {
+          this.name = name;
+          this.age = age;
+      }
+  
+      public void makeSound() {
+          System.out.println("The animal makes a sound.");
+      }
+    }
+  
+    class Dog extends Animal {
+        public Dog(String name, int age) {
+            super(name, age);
+        }
+
+        @Override
+        public void makeSound() {
+            System.out.println("The dog barks.");
+        }
+    }
+  
+    public class Main {
+      public static void main(String[] args) {
+          Animal animal = new Animal("Generic animal", 3);
+          animal.makeSound(); // Output: The animal makes a sound.
+  
+          Dog dog = new Dog("Fido", 5);
+          dog.makeSound(); // Output: The dog barks.
+      }
+    }   
+        </pre>
+      </div>
     </div>
 
     
