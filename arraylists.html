@@ -15,7 +15,7 @@
 
     <title>Sailesh Portfolio</title>
 </head>
-<body>
+<div>
     
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -55,31 +55,97 @@
   <div class="container">
     <div class="content">
       <h1>ArrayLists</h1>
-      <p>Arrays list implements a list using an array and can only hold objects not elements of a primitive data type. Unlike arrays, array lists can change their lengths so they can decrease or increase instead of having a fixed length. Uses get and set methods to change a value instead of an array that you just had to access using an index. Autoboxing is converting a primitive data type into an object for example an int to an Integer object, and this is what happens every time you set it in an array list. Autounboxing is when converting an Integer object to an int data type. It is useful to use for each loop when working with an ArrayList. Therefore the ArrayList is basically a flexible version of an array that can only hold objects instead of primitive data types.</p>
+      <p>Arrays list implements a list using an array and can only hold objects <strong>NOT</strong> elements of a primitive data type. Unlike arrays, it allows for dynamic resizing of the underlying array, making it a flexible data structure for storing and manipulating data.<br><br>Here is an example of creating an ArrayList using the 'ArrayList' class by specifying the object type it holds within the angle brackets.</p>
     </div>
     <div class="code-box">
       <div class="code-header">
         <div class="code-language">JAVA</div>
-        <button class="copy-code" onclick="copyCode()">Copy</button>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
       </div>
       <pre class="code">
-
+  ArrayList&ltString> fruits = new ArrayList&lt>();
       </pre>
     </div>
-  </body>
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="content">
+      <p>You can access elements in an ArrayList using the get() method, which takes the index of the element you want to retrieve. Remember that the index starts from 0. Throws IndexOutOfBoundsException when the index is less than size or greater or equal to the ArrayList size. You can update an element in an ArrayList by using the set() method, which takes the index of the element to be updated and the new value. </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+fruits.add("Apple");
+fruits.add("Banana");
+fruits.add("Orange");
+String firstFruit = fruits.get(0);
+System.out.println("First fruit: " + firstFruit); // First fruit: Apple
+fruits.set(1, "Mango");
+String firstFruit = fruits.get(0);
+System.out.println("First fruit: " + firstFruit); First fruit: Mango
+      </pre>
+    </div>
 
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+    <h1>Iteration</h1>
+    <div class="content">
+      <p>There are two common ways to iterate over an ArrayList in Java, either using a traditional for loop or using a for-each loop. Let's explain each method and provide coding examples for better understanding:<br><br>
+      The traditional for loop provides more control and flexibility during iteration. It allows us to explicitly manage the index and access elements using the get() method. The for loop, will loop through all the indexes from 0-size()-1 and access the element using the get method. Here's an example
+      </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+for (int i = 0; i &lt fruits.size(); i++) {
+    String fruit = fruits.get(i);
+    System.out.println(fruit);
+}
+      </pre>
+    </div>
+
+    <div class="content">
+      <p>The for-each loop is a simpler and more concise way to iterate over an ArrayList (Or any other iteratable objects). It automatically takes care of the iteration and provides access to each element without needing to manage the index explicitly. This loop is especially useful when you want to perform a specific action on each element of the ArrayList, without requiring the index. The loop uses a variable declared inside the loop statement to loop through the entire ArrayList.
+      </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  for (String fruit : fruits) {
+      // Do something with each fruit
+      System.out.println(fruit);
+  }
+      </pre>
+    </div>
+    
+    <div class="content">
+      <h1>Autoboxing & Autounboxing</h1>
+      <p>
+        Autoboxing and Autounboxing are very important while using ArrayLists as they are automatic conversions between primitive types and their corresponding wrapper classes. This is important to understand when working with ArrayLists because ArrayLists can only store objects (reference types) and not primitive types directly. Autoboxing is the proces converting a primitive data type to its corresponding wrapper class for example an int to an Integer object. When you add a primitive value to an ArrayList, autoboxing automatically converts the primitive value to its wrapper class object allowing the code to work. Autounboxing is when converting a wrapper class into its corresponding primitive data type. When you retrieve a value from an ArrayList that contains wrapper class objects, unboxing automatically converts the wrapper class object to its primitive type.
+      </p>
+    </div>
+
+    <div class="content">
+      <h1>Useful methods</h1>
+        <ul>
+          <li><strong>set(index, element)</strong>: Replaces the element at the specified index with a new element.</li>
+          <li><strong>remove(index)</strong>: Removes the element at the specified index from the ArrayList.</li>
+          <li><strong>size()</strong>: Returns the number of elements in the ArrayList.</li>
+          <li><strong>isEmpty()</strong>: Checks if the ArrayList is empty.</li>
+          <li><strong>contains(element)</strong>: Checks if the ArrayList contains a specific element.</li>
+          <li><strong>clear()</strong>: Removes all elements from the ArrayList.</li>
+          <li><strong>indexOf(element)</strong>: Returns the index of the first occurrence of the specified element, -1 if it does not.</li>
+          <li><strong>toArray()</strong>: Converts the ArrayList to an array.</li>
+        </ul>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>
-
-
-
-

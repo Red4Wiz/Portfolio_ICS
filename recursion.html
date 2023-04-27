@@ -52,10 +52,80 @@
   </nav>
 
 
-  
+  <div class="container">
+    <div class="content">
+      <h1>Recursion</h1>
+      <p>Recursion is a programming technique where a method invokes itself to solve a problem by breaking it down into smaller, simpler subproblems (similar to divide and conquer where you split a big problem into different subproblems). All recursive methods contain two components the <strong>base case</strong> and the <strong>recursive case</strong>.</p>
+      <h3>Recursive Case:</h3>
+      <p>The recursive case keeps breaking the main problem into smaller sub problems to solve the question. This contains the recursion as it involves making one or more recursive calls to the method itself with a modified input. Each recursive call is intended to handle a smaller input, slowly moving to the base case.</p>
+      <h3>Base Case:</h3>
+      <p>The base case is the condition that specifies when the recursive method should stop calling itself and return a value. It contains the simplest version of the problem that can be solved directly without further recursion. The base case ensures that the recursive calls eventually terminate and a base case is <strong>required</strong> in all recursive methods so the method can terminate.</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  public static int factorial(int n) {
+    // Base case: 0! and 1! = 1
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        // Recursive case: n! = n * (n-1)!
+        return n * factorial(n - 1);
+    }
+  }
+      </pre>
+    </div>
+
+    <div class="content">
+      <h2>Recursion VS Iteration</h2>
+      <p>A <em>recursive method</em> is a function that calls itself to solve the problem by breaking it down into smaller subproblems. It relies on the concept of a base case, which determines when the recursion should stop. Recursive methods are often concise and elegant, especially for problems with inherent recursive structures. On the other hand, an <em>iterative method</em> uses loops and variables to repeatedly instructions until the certain condition is met. Iterative methods are generally more efficient in terms of memory usage and can be easier to understand for some problems. It is especially useful for problems where you know the number of times to execute the instruction as the iterative method can be more efficiently controlled. For example we will provide an example to solidify our knowledge, to find the sum of all the numbers from 1 to n here are two different ways to achieve the task.<br><br><strong>Recursive Solution:</strong></p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  public static int sumRecursive(int n) {
+      if (n == 1) {
+          return 1;
+      } else {
+          return n + sumRecursive(n - 1);
+      }
+  }
+      </pre>
+    </div>
+    <div class="content">
+      <p><strong>Iterative Solution:</strong></p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  public static int sumIterative(int n) {
+      int sum = 0;
+      for (int i = 1; i &lt= n; i++) {
+          sum += i;
+      }
+      return sum;
+  }
+      </pre>
+    </div>
+
+    <div class="content">
+      <h2>Common Mistakes</h2>
+      <p></p>
+    </div>
+  </div>
+
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+  <script src="index.js"></script>
   <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -64,7 +134,3 @@
   </script>
 </body>
 </html>
-
-
-
-
