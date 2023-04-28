@@ -161,6 +161,13 @@
   align-items: center;
 }
 
+.content img{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 5%;
+}
+
 .content {
   text-align: center;
   margin-top: 50px;
@@ -192,7 +199,7 @@
   text-align: left;
 }
 
-.container video{
+.container iframe{
   width: 100%;
   justify-content: center;
   text-align: center;
@@ -443,4 +450,12 @@ h1 {
 .about-learnbox p {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.about-learnbox img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }

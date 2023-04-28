@@ -139,7 +139,7 @@
     <div class="content">
       <h2 id="bubble-sort">Bubble Sort</h2>
       <p>
-        Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite highf
+        Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. The process is repeated until the list is sorted. This is usually not recommened for large data sets as the time complexity is quite high.
       </p>
     </div>
 
@@ -149,29 +149,134 @@
         <button class="copy-code" onclick="copyCode(this)">Copy</button>
       </div>
       <pre class="code">
-   
+  public static void bubbleSort(int[] arr) {
+    int n = arr.length;
+    for (int i = 0; i &lt n - 1; i++) {
+        for (int j = 0; j &lt n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+  } 
       </pre>
     </div>
 
 
     <div class="content">
+      <p>In the above code, it iterates through the array and compares the adjacent elements. If they are in the wrong order it swaps them, and this process is continued until it is sorted. Bubble Sort has a time complexity of O(n^2) in the average and worst case scenarios. Bubble Sort also has a space complexity of O(1) since it operates directly on the input array. Therefore it is not the most efficient sorting algorithm, but is one of the most intuitive.</p>
       <h2 id="insertion-sort">Insertion Sort</h2>
       <p>
-        
+        Insertion Sort is another simple sorting algorithm. It keeps building the final sorted array by continuously inserting elements into their proper position within the sorted part of the array. This means that the sort keeps looking for the right position of that element in the array and inserts it into there.
       </p>
+    </div>
+
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  public static void insertionSort(int[] arr) {
+    int n = arr.length;
+    for (int i = 1; i &lt n; ++i) {
+        int key = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+  }
+  
+      </pre>
     </div>
 
     <div class="content">
+      <p>
+        It iterates through the array, starting from the second element, and compares it with the sorted part of the array (elements before the index). If the current element is smaller, it shifts the elements of the sorted part to the right to make space for the current element. This process continues until the entire array is sorted. Insertion Sort has a time complexity of O(n^2) in the average and worst case scenarios. Insertion Sort also has a space complexity of O(1) since it operates directly on the input array.
+      </p>
       <h2 id="merge-sort">Merge Sort</h2>
       <p>
-        
+        Merge Sort is a divide-and-conquer sorting algorithm. It works by dividing the unsorted array into smaller subarrays, sorting them, and then merging them to produce a sorted array.
       </p>
     </div>
 
-    <video controls>
-      <!-- <source src="https://drive.google.com/file/d/1UqZQvLSdDSQSL1MpIO_l6L91oXeFfekH/view" type="video/mp4">
-      Your browser does not support the video tag. -->
-    </video>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+
+  public static void mergeSort(int[] arr, int left, int right) {
+    if (left &lt right) {
+        int mid = (left + right) / 2;
+
+        // Sort the left and right halves recursively
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+
+        // Merge the sorted halves
+        merge(arr, left, mid, right);
+    }
+  }
+
+  public static void merge(int[] arr, int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    // Create temporary arrays
+    int[] leftArray = new int[n1];
+    int[] rightArray = new int[n2];
+
+    // Copy data to temporary arrays
+    System.arraycopy(arr, left, leftArray, 0, n1);
+    System.arraycopy(arr, mid + 1, rightArray, 0, n2);
+
+    // Merge the temporary arrays
+    int i = 0, j = 0, k = left;
+    while (i &lt n1 && j &lt n2) {
+        if (leftArray[i] &lt= rightArray[j]) {
+            arr[k] = leftArray[i];
+            i++;
+        } else {
+            arr[k] = rightArray[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements of leftArray, if any
+    while (i &lt n1) {
+        arr[k] = leftArray[i];
+        i++;
+        k++;
+    }
+
+    // Copy remaining elements of rightArray, if any
+    while (j &lt n2) {
+        arr[k] = rightArray[j];
+        j++;
+        k++;
+    }
+  }
+  
+      </pre>
+    </div>
+
+    <div class="content">
+      <p>
+        The mergeSort() method implements the Merge Sort algorithm. It recursively divides the array into two halves, sorts them using the mergeSort() method, and then merges the sorted halves using the merge() method. The merge() method combines two sorted subarrays into a single sorted array. Merge Sort has a time complexity of O(n log n) in all scenarios. It is considered an efficient sorting algorithm for large datasets. Merge Sort also has a space complexity of O(n) since it requires additional space to store the temporary arrays during the merge process.
+      </p>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ie5Yluh71Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
 
     <div class="content">
       <h1 id = "common-mistakes">Common Mistakes using Searching and Sorting</h1>
