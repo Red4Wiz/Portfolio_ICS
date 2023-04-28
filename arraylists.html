@@ -76,14 +76,14 @@
         <button class="copy-code" onclick="copyCode(this)">Copy</button>
       </div>
       <pre class="code">
-fruits.add("Apple");
-fruits.add("Banana");
-fruits.add("Orange");
-String firstFruit = fruits.get(0);
-System.out.println("First fruit: " + firstFruit); // First fruit: Apple
-fruits.set(1, "Mango");
-String firstFruit = fruits.get(0);
-System.out.println("First fruit: " + firstFruit); First fruit: Mango
+  fruits.add("Apple");
+  fruits.add("Banana");
+  fruits.add("Orange");
+  String firstFruit = fruits.get(0);
+  System.out.println("First fruit: " + firstFruit); // First fruit: Apple
+  fruits.set(1, "Mango");
+  String firstFruit = fruits.get(0);
+  System.out.println("First fruit: " + firstFruit); First fruit: Mango
       </pre>
     </div>
 
@@ -99,10 +99,10 @@ System.out.println("First fruit: " + firstFruit); First fruit: Mango
         <button class="copy-code" onclick="copyCode(this)">Copy</button>
       </div>
       <pre class="code">
-for (int i = 0; i &lt fruits.size(); i++) {
-    String fruit = fruits.get(i);
-    System.out.println(fruit);
-}
+  for (int i = 0; i &lt fruits.size(); i++) {
+      String fruit = fruits.get(i);
+      System.out.println(fruit);
+  }
       </pre>
     </div>
 
@@ -145,10 +145,11 @@ for (int i = 0; i &lt fruits.size(); i++) {
     </div>
 
     <div class="content">
-      <h1>Common Mistakes using Arrays</h1>
+      <h1>Common Mistakes using ArrayLists</h1>
       <p>
         <ul>
-          
+          <li>When removing elements from an ArrayList users usually forget to decrement to account for the movement in the arraylist.</li>
+          <li>Don't forget that the for-each loop does not let you edit the original ArrayList, so if you change the variable it doesn't automatically change the ArrayList</li>
         </ul>
       </p>
     </div>

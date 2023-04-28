@@ -53,15 +53,25 @@
   </nav>
 
   <div class="container">
+    <div class="table-of-contents">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#searching">1D Arrays</a></li>
+        <li><a href="#sequential-search">Array Declaration and Initialization</a></li>
+        <li><a href="#binary-search">Accessing Array Elements</a></li>
+        <li><a href="#sorting">1D Array Iteration</a></li>
+      </ul>
+    </div>
+
     <div class="content">
       <h1>1-D Arrays</h1>
-      <p>Arrays are a type of data structure that can hold a specific type of data. This is very useful when trying to have a collection of data of the same data type for example to store all the names of students in a classroom an array is very useful instead of using multiple string variables to store this value. In technical terms, an array is a block of memory locations that hold values of the same data type and an individual location is called an element.</p>
+      <p>Arrays are a type of data structure that can hold a specific type of data. This is very useful when trying to have a <strong>collection of data</strong> of the same data type for example to store all the names of students in a classroom an array is very useful instead of using multiple string variables to store this value. In technical terms, an array is a <strong>block of memory locations</strong> that hold values of the same data type and an individual location is called an <strong>element</strong>. An Array is an object itself therefore it acts similarly to a string when passed as a reference or having methods acted upon it.</p>
       <h3>Array Declaration and Initialization</h3>
       <p>
         To declare a 1D array in Java, you need to specify the type of elements it will hold and the size of the array. The size represents the number of elements the array can store. For example, to declare a 1D array of integers named numbers that can hold 5 elements, you would use the following code:
       </p>
 
-      <!-- <p> An element can be accessed through the index, in arrays the first element is index 0 and the nth element is n-1 and can be accessed like a[n-1]. In Java an array is a fixed length, therefore, it can’t be changed however you can create a new array and set the array equal to the new array to change its length as shown. An index can be out of bounds if it is less than 0 or greater than the array length. An array is an object itself therefore it acts similarly to a string when passed as a reference or when doing something else. </p> -->
+      <!-- <p> An element can be accessed through the index, in arrays the first element is index 0 and the nth element is n-1 and can be accessed like a[n-1]. In Java an array is a fixed length, therefore, it can’t be changed however you can create a new array and set the array equal to the new array to change its length as shown.   </p> -->
     </div>
     <div class="code-box">
       <div class="code-header">
@@ -73,7 +83,11 @@
       </pre>
     </div>
     <div class="content">
-      <p>To initialize the 1D array with specific values, you can use an array initializer:</p>
+      <p>Unless specific values are given in a {...} list,
+          all the elements are initialized to the default
+          value: 0 for numbers, false for booleans, null
+          for objects.To initialize the 1D array with specific values, you can use an array initializer:
+      </p>
     </div>
     <div class="code-box">
       <div class="code-header">
@@ -138,6 +152,10 @@
       System.out.println(number);
   }    
       </pre>
+    </div>
+    <div class="content">
+      <h2>Arrays in Methods</h2>
+      <p></p>
     </div>
 
     <div class="content">
@@ -237,7 +255,9 @@
       <h1>Common Mistakes using Arrays</h1>
       <p>
         <ul>
-          
+          <li>Be careful when accessing indexes of an array. An index can be out of bounds if it is less than 0 or greater than the array length. Doing so throws an ArrayIndexOutOfBoundsException error.</li>
+          <li>Make sure the array is properly initialized. If you simply create an array and try to access an index not initialized then the code does not work.</li>
+          <li>When working with Jagged 2D arrays, make sure to loop through array[i].length when looping through the columns as the columns of a row can change.</li>
         </ul>
       </p>
     </div>
