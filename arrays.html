@@ -55,7 +55,13 @@
   <div class="container">
     <div class="content">
       <h1>1-D Arrays</h1>
-      <p>Arrays are a type of data structure that can hold a specific type of data. This is very useful when trying to have a collection of data of the same data type for example to store all the names of students in a class an array is very useful instead of using multiple string variables to store this value. In technical terms, an array is a block of memory locations that hold values of the same data type and an individual location is called an element. An element can be accessed through the index, in arrays the first element is index 0 and the nth element is n-1 and can be accessed like a[n-1]. In Java an array is a fixed length, therefore, it can’t be changed however you can create a new array and set the array equal to the new array to change its length as shown. An index can be out of bounds if it is less than 0 or greater than the array length. An array is an object itself therefore it acts similarly to a string when passed as a reference or when doing something else. </p>
+      <p>Arrays are a type of data structure that can hold a specific type of data. This is very useful when trying to have a collection of data of the same data type for example to store all the names of students in a classroom an array is very useful instead of using multiple string variables to store this value. In technical terms, an array is a block of memory locations that hold values of the same data type and an individual location is called an element.</p>
+      <h3>Array Declaration and Initialization</h3>
+      <p>
+        To declare a 1D array in Java, you need to specify the type of elements it will hold and the size of the array. The size represents the number of elements the array can store. For example, to declare a 1D array of integers named numbers that can hold 5 elements, you would use the following code:
+      </p>
+
+      <!-- <p> An element can be accessed through the index, in arrays the first element is index 0 and the nth element is n-1 and can be accessed like a[n-1]. In Java an array is a fixed length, therefore, it can’t be changed however you can create a new array and set the array equal to the new array to change its length as shown. An index can be out of bounds if it is less than 0 or greater than the array length. An array is an object itself therefore it acts similarly to a string when passed as a reference or when doing something else. </p> -->
     </div>
     <div class="code-box">
       <div class="code-header">
@@ -63,84 +69,179 @@
         <button class="copy-code" onclick="copyCode(this)">Copy</button>
       </div>
       <pre class="code">
-  public class ArrayExample {
+  int[] numbers = new int[5];
+      </pre>
+    </div>
+    <div class="content">
+      <p>To initialize the 1D array with specific values, you can use an array initializer:</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[] numbers = { 1, 2, 3, 4, 5 };
+      </pre>
+    </div>
+    <div class="content">
+      <h2>Accessing Array Elements</h2>
+      <p>Array elements in a 1D array are accessed using zero-based indexing, this means the first element is at index 0 and the second element is at index 1 and so on. Make sure to not access an index that is out of bounds, ie. any index < 0 or >= array's size as it throws an array index out of bounds. To access an element in a 1D array, you use the array name followed by the index of the element in square brackets.</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[] numbers = { 1, 2, 3, 4, 5 };
 
-    public static void main(String[] args) {
-        
-        // Using array literal to declare and initialize an array
-        String[] fruits = {"Apple", "Banana", "Orange"}; 
+  // Accessing the first element
+  int firstNumber = numbers[0]; // firstNumber = 1
+  
+  // Accessing the third element
+  int thirdNumber = numbers[2]; // thirdNumber = 3
+      </pre>
+    </div>
+    <div class="content">
+      <h2>Iteration</h2>
+      <p><strong>Using a for Loop:</strong> One way to iterate over a 1D array in Java is by using a for loop. The loop counter variable can be used as an index to access each element in the array.
+        Here's an example of iterating over a 1D array using a for loop:</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[] numbers = {1, 2, 3, 4, 5};
 
-        // Declaring an integer array
-        int[] arr = new int[5]; //array of length 5
+  for (int i = 0; i &lt numbers.length; i++) {
+      System.out.println(numbers[i]);
+  }    
+      </pre>
+    </div>
+    <div class="content">
+      <p><strong>Using a For-Each Loop:</strong> Java also provides a "for-each" loop, which simplifies the iteration process. The loop automatically iterates over each element in the array without the need for an index as it stores the element in a variable declared inside the loop.
 
-        // Initializing an array
-        arr[0] = 1;
-        arr[1] = 2;
-        arr[2] = 3;
-        arr[3] = 4;
-        arr[4] = 5;
+      Here's an example of iterating over a 1D array using an enhanced for loop:</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[] numbers = {1, 2, 3, 4, 5};
 
-        // Accessing elements of an array using index
-        System.out.println(arr[2]); // Output: 3
-        System.out.println(fruits[1]); // Output: Banana
+  for (int number : numbers) {
+      System.out.println(number);
+  }    
+      </pre>
+    </div>
 
-        // Looping through an array
-        for (int i = 0; i &lt arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        // Output: 1 2 3 4 5
+    <div class="content">
+      <h1>2-D Arrays</h1>
+      <p>2D arrays can be visualized as a table with rows and columns while still holding the same type of data. It can be thought of as a matrix or a table. </p>
+      <!-- Java allows ragged arrays therefore it is important to use .length instead of the main row. To loop through a 2D array the use of nested loops is necessary as it loops through the rows and columns. Each loop is a shorter loop where a variable is set and is looped through an object and instead of accessing through the index it can be accessed directly. -->
+      <h3>Array Declaration and Initialization</h3>
+      <p>
+        To declare a 2D array in Java, you need to specify the type of elements it will hold and the dimensions of the array. The dimensions represent the number of rows and columns in the array.
 
-        // Using for-each loop to loop through an array
-        for (String fruit : fruits) {
-            System.out.print(fruit + " ");
-        }
-        // Output: Apple Banana Orange
-    }
+        For example, to declare a 2D array of integers named matrix with 3 rows and 4 columns, you would use the following code:
+      </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[][] matrix = new int[3][4];
+      </pre>
+    </div>
+    <div class="content">
+      <p>Array elements in a 1D array are accessed using zero-based indexing, this means the first element is at index 0 and the second element is at index 1 and so on. Make sure to not access an index that is out of bounds, ie. any index < 0 or >= array's size as it throws an array index out of bounds. To access an element in a 1D array, you use the array name followed by the index of the element in square brackets.</p>
+    </div>
+
+    <div class="content">
+      <p>To initialize the 2D array with specific values, you can use nested array initializers. Java also allows us to create jagged arrays, meaning there can be different lenghts of arrays in each row. Here are the both ways to initialize in code.
+      </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[][] matrix = { 
+    { 1, 2, 3 },
+    { 4, 5, 6 },
+    { 7, 8, 9 }
+  };
+
+  int[][] jaggedMatrix = { 
+    { 1, 2 },
+    { 4, 5, 6,7,8 },
+    { 9 }
+  };
+      </pre>
+    </div>
+
+    <div class="content">
+      <h2>Accessing Array Elements</h2>
+      <p>Array elements in a 2D array are accessed using row and column indices. To access an element in a 2D array, you use the array name followed by the row and column indices in square brackets.
+      </p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[][] matrix = { 
+    { 1, 2, 3 },
+    { 4, 5, 6 },
+    { 7, 8, 9 }
+  };
+
+  // Accessing the element in the second row, third column
+  int element = matrix[1][2]; // element = 6
+      </pre>
+    </div>
+    <div class="content">
+      <h2>Iteration</h2>
+      <p><strong>Using a for Loop:</strong> When working with 2D arrays, you need to use nested for loops to iterate over the elements. The outer loop controls the rows, while the inner loop controls the columns.
+        Here's an example of iterating over a 2D array using nested for loops:</p>
+    </div>
+    <div class="code-box">
+      <div class="code-header">
+        <div class="code-language">JAVA</div>
+        <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      </div>
+      <pre class="code">
+  int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
+  
+  for (int i = 0; i &lt matrix.length; i++) {
+      for (int j = 0; j &lt matrix[i].length; j++) {
+          System.out.println(matrix[i][j]);
+      }
   }
       </pre>
     </div>
     <div class="content">
-      <h1>2-D Arrays</h1>
-      <p>2D arrays can be visualized as a table with rows and columns while still holding the same type of data. It is basically a 1d array of 1d arrays with rows. Java allows ragged arrays therefore it is important to use .length instead of the main row. To loop through a 2D array the use of nested loops is necessary as it loops through the rows and columns. Each loop is a shorter loop where a variable is set and is looped through an object and instead of accessing through the index it can be accessed directly.</p>
+      <h1>Common Mistakes using Arrays</h1>
+      <p>
+        <ul>
+          
+        </ul>
+      </p>
     </div>
-    <div class="code-box">
-      <div class="code-header">
-        <div class="code-language">JAVA</div>
-        <button class="copy-code" onclick="copyCode(this)">Copy</button>
-      </div>
-      <pre class="code">
-  public class Array2DExample {
-
-    public static void main(String[] args) {
-        
-      //Declaring a 2D array
-        int[][] matrix = new int[2][2];
-        
-        // Initializing the elements of the 2D array
-        matrix[0][0] = 1;
-        matrix[0][1] = 2;
-        matrix[1][0] = 3;
-        matrix[1][1] = 4;
-
-        //Declaring and Initializing a 2D array
-        int[][] arr = {{10,11}{12,13}};
-        
-        // Accessing elements of the 2D array
-        System.out.println(matrix[0][0]); // Output: 1
-        System.out.println(matrix[1][1]); // Output: 4
-        
-        // Looping through the 2D array
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-  }
-      
-      </pre>
-    </div>
+  </div>
   
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

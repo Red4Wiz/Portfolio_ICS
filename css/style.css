@@ -202,6 +202,7 @@
   width: 50%;
   border-radius: 10px;
   text-align: center;
+  margin-left: 25%;
 }
 
 .table-of-contents h2 {
@@ -406,4 +407,33 @@ h1 {
   font-size: 1.2rem;
   line-height: 1.5;
   text-align: left;
+}
+/*Learning outside the course*/
+.about-learning {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+} 
+.about-learnbox {
+  flex-basis: 25%;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--blue);
+  background-color: var(--contrast);
+}
+
+.about-learnbox h3 {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-learnbox p {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
