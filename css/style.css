@@ -192,6 +192,43 @@
 }
 
 
+/*CSS for table of contents in each tutorial page*/
+.table-of-contents {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  background-color: var(--contrast);
+  margin-top: 50px;
+  padding: 20px;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.table-of-contents h2 {
+  color: var(--blue);
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 10px;
+}
+
+.table-of-contents a {
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.table-of-contents a:hover {
+  background-color: white;
+}
+
 /*CSS for the code box*/
 .code-box {
   background-color: var(--black);

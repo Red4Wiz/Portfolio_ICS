@@ -38,6 +38,7 @@
               <li><a class="dropdown-item" href="arraylists.html">ArrayLists</a></li>
               <li><a class="dropdown-item" href="searchsort.html">Searching & Sorting</a></li>
               <li><a class="dropdown-item" href="recursion.html">Recursion</a></li>
+              <li><a class="dropdown-item" href="bibliography.html">Bibliography</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -52,13 +53,23 @@
   </nav>
 
   <div class="container">
+    <div class="table-of-contents">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#searching">Searching</a></li>
+        <li><a href="#sequential-search">Sequential Search</a></li>
+        <li><a href="#binary-search">Binary Search</a></li>
+        <li><a href="#sorting">Sorting</a></li>
+      </ul>
+    </div>
+
     <div class="content">
-      <h1>Searching</h1>
+      <h1 id="searching">Searching</h1>
       <p>In Java searching refers to the process of finding a specific element within a collection of data such as an array or ArrayList. There are different searching algorithms available, however the most common ones are <strong>sequential search</strong> and <strong>binary search</strong>. The main purpose of using seraching algorithm is to locate the position of a particular element. For example, imagine you are a teacher and you are taking attendance, you go through the attendance list to check if anyone is absent. In this scenario you are <strong>searching</strong> for a specific student to make sure they are present.</p>
     </div>
 
     <div class="content">
-      <h2>Sequential Search</h2>
+      <h2 id="sequential-search">Sequential Search</h2>
       <p>Sequential search, also known as linear search, is a simple algorithm that checks each element in a collection one by one until the target element is found or the end of the collection is reached. It cane be used with both sorted and unsorted collections of data.<br><br>Here is an example of sequential search on an Integer ArrayList:</p>
     </div>
     <div class="code-box">
@@ -82,7 +93,7 @@
     </div>
 
     <div class="content">
-      <h2>Binary Search</h2>
+      <h2 id="binary-search">Binary Search</h2>
       <p>Binary search is a fast search algorithm that <strong>requires</strong> the collection to be sorted in ascending order. It works by repeatedly dividing the search space in half until the target element is found or it runs out of divisions. This is a very efficient searching algorithm for large data sets that are already sorted.<br><br>Here is an example of sequential search on an Integer ArrayList:</p>
     </div>
     <div class="code-box">
@@ -117,7 +128,7 @@
     <!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hackerearth.com%2Fpractice%2Fnotes%2Fsorting-and-searching-algorithms-time-complexities-cheat-sheet%2F&psig=AOvVaw1GaA1azYKCCqL5A4dLjFKu&ust=1682643080878000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMj4wIrsyP4CFQAAAAAdAAAAABAJ -->
 
     <div class="content">
-      <h1>Sorting</h1>
+      <h1 id="sorting">Sorting</h1>
       <p>In Java, sorting refers to arranging elements of a collection or array in a specific order. In most scenarios the sorting algorithm sorts the data in either ascending or descending order to make it more organized. The elements are rearranged in a specific order according to a comparison function as it defines the criteria for determining the order of elements. For example, when sorting a list of numbers, the comparison function might specify that the elements should be arranged in ascending order (from the smallest to the largest) or descending order (from the largest to the smallest). There are many different sorting algorithms, and they all have different implementations and run times, and are good for different scenarios. </p>
     </div>
 
