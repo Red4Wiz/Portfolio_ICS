@@ -54,8 +54,20 @@
 
   <body>
     <div class="container">
+
+      <div class="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#oop">OOP</a></li>
+          <li><a href="#inheritance">Inheritance</a></li>
+          <li><a href="#poly">Polymorphism</a></li>
+          <li><a href="#abstraction">Abstraction</a></li>
+          <li><a href="#mistake">Common Mistakes</a></li>
+        </ul>
+      </div>
+
       <div class="content">
-        <h1>Object-Oriented programming</h1>
+        <h1 id="oop">Object-Oriented programming</h1>
         <p>Object-Oriented programming (OOP) is a way to simulate real-life situations through software. Rather than functions and logic involved in a typical program, OOP is a way to use coding to design data using objects. For example, imagine a car, we can use OOP to simulate a car object in code with its own attributes (features), and methods (functions). Here is an example of using code to simulate a class Dog. We will go over the details of the code later.</p>
       </div>
       <div class="code-box">
@@ -111,7 +123,7 @@
 
 
       <div class="content">
-        <h1>Inheritance</h1>
+        <h1 id="inheritance">Inheritance</h1>
         <p>Inheritance is a very important and useful feature that can be used with classes to create more realistic situations. Inheritance is when you create a subclass that inherits all the properties from a main class, therefore there is no need to rewrite code. An example of inheritance in real life is similar to how a child inherits their features from their parents but still has their own features that are unique to them. Encapsulation is especially useful when using inheritance, to restrict the direct access to variables.</p>
 
         <img src="assets/heirarchy.png">
@@ -157,7 +169,7 @@
         <h2>Method Overriding</h2>
         <p>Overriding is when you create a method in the subclass that is the same as the parent class and in this case, the subclass runs the method inside this than the main class which is overriding its main class method. This is especially useful in scenarios where two subclasses do the same action however different tasks, for example both cats and dogs make noise however a dog barks and a cat meows.</p>
 
-        <h1>Polymorphism</h1>
+        <h1 id="polymorphism">Polymorphism</h1>
         <p>
           In Java polymorphism is the ability of a class to to use different implementations of a method depending on the type of object it is. This allows us to perform the same action in many different ways, therefore this only occurs when inheritance is involved. Superclasses of different subclasses are all polymorphic, or another way of thinking about this is that if a class can pass more than one IS-A test, it is polymorphic. Polymorphism is achieved through method overloading and method overriding.
         </p>
@@ -220,10 +232,10 @@
       </div>
 
       <div class="content">
-        <h1>Abstraction</h1>
+        <h1 id="abstraction">Abstraction</h1>
         <p>Abstraction is achieved using abstract classes and interfaces. Abstract classes cannot be instantiated and serve as a blueprint for derived classes. Interfaces define a contract for classes to implement specific methods. Interfaces defines the contract that classes must adhere to. They specify a set of methods that implementing classes must provide. Here is a simple table describing both Interfaces and Abstract classes provided by DigitalOcean:</p>
         <img src="https://journaldev.nyc3.digitaloceanspaces.com/2013/07/abstract-class-vs-interface.png">
-        <h1>Common Mistakes using OOP</h1>
+        <h1 id="mistake">Common Mistakes using OOP</h1>
         <p>
           <ul>
             <li>Misunderstanding method overloading and overriding. Even I at the beginning kept switching the concepts up, so make sure to know the difference.</li>

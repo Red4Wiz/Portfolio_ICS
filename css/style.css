@@ -177,7 +177,7 @@
 .content h1 {
   font-size: 40px;
   margin-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content h2 {
@@ -203,6 +203,12 @@
   width: 100%;
   justify-content: center;
   text-align: center;
+}
+
+.links {
+  max-width: 80%;
+  text-align: left;
+  margin-left: 15%;
 }
 
 

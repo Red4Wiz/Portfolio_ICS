@@ -57,12 +57,7 @@
       <h2>Table of Contents</h2>
       <ul>
         <li><a href="#searching">Searching</a></li>
-        <li><a href="#sequential-search">Sequential Search</a></li>
-        <li><a href="#binary-search">Binary Search</a></li>
         <li><a href="#sorting">Sorting</a></li>
-        <li><a href="#bubble-sort">Bubble Sort</a></li>
-        <li><a href="#insertion-sort">Insertion Sort</a></li>
-        <li><a href="#merge-sort">Merge Sort</a></li>
         <li><a href="#common-mistakes">Common Mistakes</a></li>
       </ul>
     </div>
@@ -98,6 +93,7 @@
 
     <div class="content">
       <h2 id="binary-search">Binary Search</h2>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220309171621/BinarySearch.png">
       <p>Binary search is a fast search algorithm that <strong>requires</strong> the collection to be sorted in ascending order. It works by repeatedly dividing the search space in half until the target element is found or it runs out of divisions. This is a very efficient searching algorithm for large data sets that are already sorted.<br><br>Here is an example of sequential search on an Integer ArrayList:</p>
     </div>
     <div class="code-box">
@@ -128,8 +124,6 @@
     <div class="content">
       <p>The time complexity of the binary search algorithm is O(log n), where n is the number of elements in the collection being searched in. However, the search only works when the entire array is sorted. The best case scenario for binary search is O(1), which means the search operation can be completed in constant time as if it the element is exactly in the middle of the array it only takes one search. This algorithm is great for large sorted data sets due to its efficient approach</p>
     </div>
-
-    <!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hackerearth.com%2Fpractice%2Fnotes%2Fsorting-and-searching-algorithms-time-complexities-cheat-sheet%2F&psig=AOvVaw1GaA1azYKCCqL5A4dLjFKu&ust=1682643080878000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMj4wIrsyP4CFQAAAAAdAAAAABAJ -->
 
     <div class="content">
       <h1 id="sorting">Sorting</h1>
@@ -202,7 +196,7 @@
       </p>
       <h2 id="merge-sort">Merge Sort</h2>
       <p>
-        Merge Sort is a divide-and-conquer sorting algorithm. It works by dividing the unsorted array into smaller subarrays, sorting them, and then merging them to produce a sorted array.
+        Merge Sort is a divide-and-conquer sorting algorithm. It works by dividing the unsorted array into smaller subarrays, sorting them, and then merging them back to produce a sorted array. This works on the concept that all arrays that are split are sorted, therefore as you continue to merge, the arrays become sorted.
       </p>
     </div>
 
@@ -271,18 +265,27 @@
 
     <div class="content">
       <p>
-        The mergeSort() method implements the Merge Sort algorithm. It recursively divides the array into two halves, sorts them using the mergeSort() method, and then merges the sorted halves using the merge() method. The merge() method combines two sorted subarrays into a single sorted array. Merge Sort has a time complexity of O(n log n) in all scenarios. It is considered an efficient sorting algorithm for large datasets. Merge Sort also has a space complexity of O(n) since it requires additional space to store the temporary arrays during the merge process.
+        The mergeSort() recursively divides the array into two halves, sorts them using the mergeSort() method, and then merges the sorted halves using the merge() method. The merge() method combines two sorted subarrays into a single sorted array. The way merge() works is by taking the first element of the two halves, and keeps adding the lower element. This way the end array will be in ascending order. Merge Sort has a time complexity of O(n log n) in all scenarios. It is considered an efficient sorting algorithm for large datasets.<br><br>Here is a video made by Myself and Pouya, talking about the merge sort algorithm:
       </p>
     </div>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Ie5Yluh71Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <div class="content">
+      <p>
+        I demonstrated the three most common sorting algorithms, however there are many more. Here is a table made by HackerEarth that provides some of the other algorithms and their time complexity.
+      </p>
+      <img src="assets/searchsort.png">
+    </div>
     
 
     <div class="content">
       <h1 id = "common-mistakes">Common Mistakes using Searching and Sorting</h1>
       <p>
         <ul>
-          
+          <li>Not handling edge cases. For example in merge sort, it is important to make sure to add left over elements within the two halves of the array. So, make sure to check for all the edge cases.</li>
+          <li>Consider the storing stability, as some sorting algorithms are not stable meaning the relative order within the array might be different if the values are the same.</li>
+          <li>Make sure to use the algorithm that fits your scenario, as it might be smart to use insertion sort for small data sets, but merge or tim sort for large data sets.</li>
         </ul>
       </p>
     </div>

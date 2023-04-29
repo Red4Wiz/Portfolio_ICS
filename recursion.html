@@ -57,9 +57,9 @@
     <div class="content">
       <h1>Recursion</h1>
       <p>Recursion is a programming technique where a method invokes itself to solve a problem by breaking it down into smaller, simpler subproblems (similar to divide and conquer where you split a big problem into different subproblems). All recursive methods contain two components the <strong>base case</strong> and the <strong>recursive case</strong>.</p>
-      <h3>Recursive Case:</h3>
+      <h2>Recursive Case:</h2>
       <p>The recursive case keeps breaking the main problem into smaller sub problems to solve the question. This contains the recursion as it involves making one or more recursive calls to the method itself with a modified input. Each recursive call is intended to handle a smaller input, slowly moving to the base case.</p>
-      <h3>Base Case:</h3>
+      <h2>Base Case:</h2>
       <p>The base case is the condition that specifies when the recursive method should stop calling itself and return a value. It contains the simplest version of the problem that can be solved directly without further recursion. The base case ensures that the recursive calls eventually terminate and a base case is <strong>required</strong> in all recursive methods so the method can terminate.</p>
     </div>
     <div class="code-box">
@@ -122,7 +122,10 @@
       <h1>Common Mistakes using Recursion</h1>
       <p>
         <ul>
-          <li>Always have a base case! Without the base case it creates an infinite loop.</li>
+          <li>Always have a base case! Without the base case the method never stops recursing.</li>
+          <li>Always make sure you are accurately calling the recursive parameters, as sometimes you might change the order, or give the wrong range.</li>
+          <li>Create a program that will break down the problem into sub problems. Don't create a pointless recursive program.</li>
+          <li>Avoid stack overflow errors. Recursion relies on the call stack to keep track of function calls, if the recursion depth gets too large then it produces an error.</li>
         </ul>
       </p>
     </div>

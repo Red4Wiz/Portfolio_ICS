@@ -56,17 +56,16 @@
     <div class="table-of-contents">
       <h2>Table of Contents</h2>
       <ul>
-        <li><a href="#searching">1D Arrays</a></li>
-        <li><a href="#sequential-search">Array Declaration and Initialization</a></li>
-        <li><a href="#binary-search">Accessing Array Elements</a></li>
-        <li><a href="#sorting">1D Array Iteration</a></li>
+        <li><a href="#array">1D Arrays</a></li>
+        <li><a href="#array2">2D Arrays</a></li>
+        <li><a href="#mistake">Common Mistakes</a></li>
       </ul>
     </div>
 
     <div class="content">
-      <h1>1-D Arrays</h1>
+      <h1 id="array">1-D Arrays</h1>
       <p>Arrays are a type of data structure that can hold a specific type of data. This is very useful when trying to have a <strong>collection of data</strong> of the same data type for example to store all the names of students in a classroom an array is very useful instead of using multiple string variables to store this value. In technical terms, an array is a <strong>block of memory locations</strong> that hold values of the same data type and an individual location is called an <strong>element</strong>. An Array is an object itself therefore it acts similarly to a string when passed as a reference or having methods acted upon it.</p>
-      <h3>Array Declaration and Initialization</h3>
+      <h2>Array Declaration and Initialization</h2>
       <p>
         To declare a 1D array in Java, you need to specify the type of elements it will hold and the size of the array. The size represents the number of elements the array can store. For example, to declare a 1D array of integers named numbers that can hold 5 elements, you would use the following code:
       </p>
@@ -153,16 +152,12 @@
   }    
       </pre>
     </div>
-    <div class="content">
-      <h2>Arrays in Methods</h2>
-      <p></p>
-    </div>
 
     <div class="content">
-      <h1>2-D Arrays</h1>
+      <h1 id="array2">2-D Arrays</h1>
       <p>2D arrays can be visualized as a table with rows and columns while still holding the same type of data. It can be thought of as a matrix or a table. </p>
-      <!-- Java allows ragged arrays therefore it is important to use .length instead of the main row. To loop through a 2D array the use of nested loops is necessary as it loops through the rows and columns. Each loop is a shorter loop where a variable is set and is looped through an object and instead of accessing through the index it can be accessed directly. -->
-      <h3>Array Declaration and Initialization</h3>
+
+      <h2>Array Declaration and Initialization</h2>
       <p>
         To declare a 2D array in Java, you need to specify the type of elements it will hold and the dimensions of the array. The dimensions represent the number of rows and columns in the array.
 
@@ -178,10 +173,6 @@
   int[][] matrix = new int[3][4];
       </pre>
     </div>
-    <div class="content">
-      <p>Array elements in a 1D array are accessed using zero-based indexing, this means the first element is at index 0 and the second element is at index 1 and so on. Make sure to not access an index that is out of bounds, ie. any index < 0 or >= array's size as it throws an array index out of bounds. To access an element in a 1D array, you use the array name followed by the index of the element in square brackets.</p>
-    </div>
-
     <div class="content">
       <p>To initialize the 2D array with specific values, you can use nested array initializers. Java also allows us to create jagged arrays, meaning there can be different lenghts of arrays in each row. Here are the both ways to initialize in code.
       </p>
@@ -207,6 +198,8 @@
     </div>
 
     <div class="content">
+      <p>Here is a visual representation of a jagged array provided by Geeks for Geeks:</p>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200131134104/Jagged-Array.jpg">
       <h2>Accessing Array Elements</h2>
       <p>Array elements in a 2D array are accessed using row and column indices. To access an element in a 2D array, you use the array name followed by the row and column indices in square brackets.
       </p>
@@ -252,7 +245,7 @@
       </pre>
     </div>
     <div class="content">
-      <h1>Common Mistakes using Arrays</h1>
+      <h1 id="mistake">Common Mistakes using Arrays</h1>
       <p>
         <ul>
           <li>Be careful when accessing indexes of an array. An index can be out of bounds if it is less than 0 or greater than the array length. Doing so throws an ArrayIndexOutOfBoundsException error.</li>
