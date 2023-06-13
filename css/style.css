@@ -465,3 +465,64 @@ h1 {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* Culminating Page CSS */
+.culm-body {
+  text-align: center;
+}
+
+.culm-body h1 {
+  font-family: 'Zen Dots', cursive;
+  font-weight: bold;
+  font-size: 4rem;
+  color: #ff6b6b;
+}
+
+.culm-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  color: var(--black);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.culm-content h3 {
+  font-size: 2.5rem;
+}
+
+.culm-content p {
+  font-size: 1.5rem;
+}
+
+
+.culm-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.culm-level h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.culm-level .culm-image {
+  width: 350px; /* Adjust the width as needed */
+  margin-bottom: 20px;
+}
+
+.culm-level p {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
